@@ -6,6 +6,8 @@ This is a free garmin G1000 Panel that works with Microsoft Flight Simulator FSX
 Features
 * Current Track Indicator on the HSI (Magenta Diamond)
 * MFD map is North up
+* Virtual Cockpit mode works
+* All features of the default FSX G1000 work
 
 To install, download the zip file here:
 https://github.com/Voltron369/panel.G1000IFR/archive/master.zip
