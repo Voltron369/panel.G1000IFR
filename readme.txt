@@ -17,4 +17,10 @@ These will override (but not overwrite) the FSX default G1000 for that aircraft
 
 To uninstall, delete the g1000 and fs9gps directories from that aircraft
 
+Support Forum: https://github.com/Voltron369/panel.G1000IFR/issues
+
 Please feel free to add code to this project.  Let's make a great G1000 together!
+https://github.com/Voltron369/panel.G1000IFR
+
+Gerard Decatrel
+gdecatrel@gmail.com
