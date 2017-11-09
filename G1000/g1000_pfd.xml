@@ -1,4 +1,4 @@
-<SimBase.Document Type="AceXML" version="1,0" id="g1000_pfd">
+﻿<SimBase.Document Type="AceXML" version="1,0" id="g1000_pfd">
     <Descr>AceXML Document</Descr>
     <Filename>g1000_pfd.xml</Filename>
     <SimGauge.Gauge id="g1000_pfd" ArtDirectory="%inetroot%\private\fs\src\gauges\g1000\objh\i386">
@@ -3881,6 +3881,19 @@ and</Visibility>
                         <Expression id="Expression">
                             <Script>(A:Plane heading degrees gyro, radians) /-/
 (A:Partial Panel Heading, bool) if{ 0 }</Script>
+                        </Expression>
+                    </Rotation>
+                </Element>
+                <Element id="Wind Bug">
+                    <FloatPosition>360.000,457.000</FloatPosition>
+                    <Image id="g1000_pfd_hsi_wind.bmp" Name="g1000_pfd_hsi_wind.bmp">
+                        <Transparent>True</Transparent>
+                        <Axis>127.000,135.000</Axis>
+                        <Bright>True</Bright>
+                    </Image>
+                    <Rotation id="Rotation">
+                        <Expression id="Expression">
+                            <Script>(A:VELOCITY WORLD X, knots) (A:VELOCITY WORLD Z, knots) / atg (A:MAGVAR, radians) - (A:VELOCITY WORLD Z, knots) 0 &lt; if{ 3.14159 + } (A:Plane heading degrees gyro, radians) - rnor </Script>
                         </Expression>
                     </Rotation>
                 </Element>

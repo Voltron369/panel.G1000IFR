@@ -1,4 +1,4 @@
-<Gauge Name="GPS_500" Version="1.0">
+﻿<Gauge Name="GPS_500" Version="1.0">
 	<Image Name="gps_500_background.bmp" />
 	<!-- local vars
 		activateLeg				- 1=display activate leg popup, 0=hide activate leg popup
@@ -756,7 +756,7 @@
 		<Element Name="MapView Pages">
 			<Visible>(@g:currentGroup) @kNAVPageGroup ==</Visible>
 			<Position X="59" Y="0" />
-			<CustomDraw Name="fs9gps:map" X="275" Y="230" LayerTerrain="Yes" LayerBorders="Yes" LayerFlightPlan="Yes" FlightPlanLineWidth="2.5" ActiveColorLayerFlightPlan="0x7010B0" PastColorLayerFlightPlan="0xF0F0F0" ColorLayerFlightPlan="0xF0F0F0" Bright="Yes" CenterX="137">
+			<CustomDraw Name="fs9gps:map" X="275" Y="230" LayerTerrain="Yes" LayerBorders="Yes" LayerFlightPlan="Yes" FlightPlanLineWidth="2.5" ActiveColorLayerFlightPlan="0x7010B0" PastColorLayerFlightPlan="0xF0F0F0" ColorLayerFlightPlan="0xF0F0F0" Bright="Yes" CenterX="137" TrackUp="No">
 				<CenterY>(@g:currentPageNAV) @kNAVPageDflt == if{ 150 } els{ 98 }</CenterY>
 				<Zoom>(@g:map_ZoomFactor) 1852.0 *</Zoom>
 				<Latitude>(A:GPS POSITION LAT, Radians)</Latitude>
@@ -778,7 +778,7 @@
 				<TextDetailLayerNDBs>0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 24 (@g:map_ZoomStep) case</TextDetailLayerNDBs>
 				<TextDetailLayerIntersections>0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 24 (@g:map_ZoomStep) case</TextDetailLayerIntersections>
 				<ObjectDetailLayerFlightPlan>0xE 0xF (@c:FlightPlanIsActiveApproach) ?</ObjectDetailLayerFlightPlan>
-				<TrackUp>(@g:currentPageNAV) @kNAVPageDflt ==</TrackUp>
+				<!-- <TrackUp>(@g:currentPageNAV) @kNAVPageDflt ==</TrackUp> -->	
 				<LayerVehicles>0</LayerVehicles>
 			</CustomDraw>
 			<Element>
