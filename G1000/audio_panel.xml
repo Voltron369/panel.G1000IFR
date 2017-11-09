@@ -1,0 +1,406 @@
+<SimBase.Document Type="AceXML" version="1,0" id="audio_panel">
+    <Descr>AceXML Document</Descr>
+    <Filename>audio_panel.xml</Filename>
+    <SimGauge.Gauge id="audio_panel" ArtDirectory="W:\fs10corext\private\fs\src\gauges\g1000\objh\i386">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>93,481</Size>
+        <Image id="audio_panel_background.bmp" Name="audio_panel_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Macro id="UpdateButton" Name="UpdateButton">
+            <MacroValue>(@1) 0 &gt; if{ (@1) ++ s0 (&gt;@1) l0 6 &gt; if{ 0 (&gt;@1) } }</MacroValue>
+        </Macro>
+        <Update id="Unpress buttons">
+            <Script>@UpdateButton(L:COM1 Mic pressed)
+@UpdateButton(L:COM2 Mic pressed)
+@UpdateButton(L:NAV1 pressed)
+@UpdateButton(L:NAV2 pressed)
+@UpdateButton(L:MKR pressed)
+@UpdateButton(L:DME pressed)
+@UpdateButton(L:COM1 pressed)
+@UpdateButton(L:COM2 pressed)
+</Script>
+        </Update>
+        <Element id="COM1 Mic">
+            <FloatPosition>17.000,16.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:COM1 Mic Pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_1_mic_out.bmp" Name="audio_panel_button_com_1_mic_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_1_mic_in.bmp" Name="audio_panel_button_com_1_mic_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:COM TRANSMIT:1, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="COM1">
+            <FloatPosition>52.000,16.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:COM1 pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_1_out.bmp" Name="audio_panel_button_com_1_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_1_in.bmp" Name="audio_panel_button_com_1_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:COM RECEIVE ALL, bool) (A:COM1 Transmit, bool) or</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="COM2 Mic">
+            <FloatPosition>17.000,49.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:COM2 Mic pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_2_mic_out.bmp" Name="audio_panel_button_com_2_mic_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_2_mic_in.bmp" Name="audio_panel_button_com_2_mic_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:COM TRANSMIT:2, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="COM2">
+            <FloatPosition>52.000,49.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:COM2 pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_2_out.bmp" Name="audio_panel_button_com_2_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_com_2_in.bmp" Name="audio_panel_button_com_2_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:COM RECEIVE ALL, bool) (A:COM2 transmit, bool) or</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="MKR">
+            <FloatPosition>17.000,178.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:MKR pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_mkr_mute_out.bmp" Name="audio_panel_button_mkr_mute_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_mkr_mute_in.bmp" Name="audio_panel_button_mkr_mute_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:MARKER SOUND, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="DME">
+            <FloatPosition>17.000,212.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:DME pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_dme_out.bmp" Name="audio_panel_button_dme_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_dme_in.bmp" Name="audio_panel_button_dme_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>8.000,-9.000</FloatPosition>
+                <Visibility>(A:DME SOUND, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="NAV1">
+            <FloatPosition>52.000,212.000</FloatPosition>
+            <Element id="PushButton">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:NAV1 pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_nav_1_out.bmp" Name="audio_panel_button_nav_1_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_nav_1_in.bmp" Name="audio_panel_button_nav_1_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>7.000,-9.000</FloatPosition>
+                <Visibility>(A:NAV SOUND:1, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="NAV2">
+            <FloatPosition>52.000,243.000</FloatPosition>
+            <Element id="Element">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Select id="Select">
+                    <Expression id="Expression">
+                        <Script>(L:NAV2 pressed) 0 &gt;</Script>
+                    </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="audio_panel_button_nav_2_out.bmp" Name="audio_panel_button_nav_2_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="audio_panel_button_nav_2_in.bmp" Name="audio_panel_button_nav_2_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+            </Element>
+            <Element id="On state (triangle)">
+                <FloatPosition>7.000,-9.000</FloatPosition>
+                <Visibility>(A:NAV SOUND:2, bool)</Visibility>
+                <Image id="audio_panel_arrow_com1.bmp" Name="audio_panel_arrow_com1.bmp">
+                    <Transparent>True</Transparent>
+                </Image>
+            </Element>
+        </Element>
+        <Element id="Reversionary button">
+            <FloatPosition>35.000,440.000</FloatPosition>
+            <Select id="Select">
+                <Expression id="Expression">
+                    <Script>(L:Reversionary pressed, bool) 0 &gt;</Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0.000</ExpressionResult>
+                    <Image id="audio_panel_button_disp_backup_out.bmp" Name="audio_panel_button_disp_backup_out.bmp">
+                        <Transparent>True</Transparent>
+                    </Image>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1.000</ExpressionResult>
+                    <Image id="audio_panel_button_disp_backup_in.bmp" Name="audio_panel_button_disp_backup_in.bmp">
+                        <Transparent>True</Transparent>
+                    </Image>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>91,479</Size>
+            <Tooltip id="Tooltip">
+                <DefaultId>TOOLTIPTEXT_GAUGE_RADIO_CONTROL_HEAD</DefaultId>
+            </Tooltip>
+            <MouseArea id="COM 1 Mic">
+                <FloatPosition>20.000,17.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:COM1 Mic pressed)
+(&gt;K:COM1_TRANSMIT_SELECT) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_COM1_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="COM 2 Mic">
+                <FloatPosition>19.000,51.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:COM2 Mic pressed)
+(&gt;K:COM2_TRANSMIT_SELECT) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_COM2_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="NAV 1 Audio">
+                <FloatPosition>55.000,214.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:NAV1 pressed)
+(&gt;K:RADIO_VOR1_IDENT_TOGGLE) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_NAV1_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="NAV 2 Audio">
+                <FloatPosition>55.000,245.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:NAV2 pressed)
+(&gt;K:RADIO_VOR2_IDENT_TOGGLE) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_NAV2_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="Marker Audio">
+                <FloatPosition>20.000,180.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:MKR pressed)
+(&gt;K:MARKER_SOUND_TOGGLE) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_MARKER_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="DME Audio">
+                <FloatPosition>19.000,214.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:DME pressed)
+(&gt;K:RADIO_DME1_IDENT_TOGGLE) 
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_DME_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="COM 1 Audio">
+                <FloatPosition>55.000,17.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:COM1 pressed, bool)
+(A:COM1 TRANSMIT, bool) ! 
+if{  (&gt;K:COM_RECEIVE_ALL_TOGGLE) }
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_COM1_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="COM 2 Audio">
+                <FloatPosition>53.000,50.000</FloatPosition>
+                <Size>24,18</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>1 (&gt;L:COM2 pressed, bool)
+(A:COM2 TRANSMIT, bool) ! 
+if{  (&gt;K:COM_RECEIVE_ALL_TOGGLE) }
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_COM2_AUDIO_SELECTOR</DefaultId>
+                </Tooltip>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

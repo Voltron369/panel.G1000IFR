@@ -1,0 +1,3337 @@
+<SimBase.Document Type="AceXML" version="1,0" id="MFD">
+    <Descr>AceXML Document</Descr>
+    <Filename>MFD_LeftSide.xml</Filename>
+    <SimGauge.Gauge id="Gauge" ArtDirectory="H:\FS10CoreXT\private\fs\art\objects\aircraft\g1000">
+                <Macro id="TopBarLargeFont" Name="TopBarLargeFont">
+            <MacroValue>21</MacroValue>
+        </Macro>
+        <Macro id="TopBarMediumFontHeight" Name="TopBarMediumFontHeight">
+            <MacroValue>16</MacroValue>
+        </Macro>
+        <Macro id="TopBarMediumHeight" Name="TopBarMediumHeight">
+            <MacroValue>21</MacroValue>
+        </Macro>
+        <Macro id="TopBarSmallFontHeight" Name="TopBarSmallFontHeight">
+            <MacroValue>17</MacroValue>
+        </Macro>
+        <Macro id="TopBarSmallHeight" Name="TopBarSmallHeight">
+            <MacroValue>19</MacroValue>
+        </Macro>
+        <Macro id="TopBarLargeFontHeight" Name="TopBarLargeFontHeight">
+            <MacroValue>23</MacroValue>
+        </Macro>
+        <Macro id="TopBarDataTop" Name="TopBarDataTop">
+            <MacroValue>-2</MacroValue>
+        </Macro>
+        <Macro id="FailureFontHeight" Name="FailureFontHeight">
+            <MacroValue>22</MacroValue>
+        </Macro>
+        <Macro id="SoftkeyFont" Name="SoftkeyFont">
+        </Macro>
+        <Macro id="COMDataWidth" Name="COMDataWidth">
+            <MacroValue>80</MacroValue>
+        </Macro>
+        <Macro id="TopBarSmallLabelTop" Name="TopBarSmallLabelTop">
+            <MacroValue>1</MacroValue>
+        </Macro>
+            <Macro id="PowerOn" Name="PowerOn">
+                <MacroValue>(A:PARTIAL PANEL ELECTRICAL, bool) (A:PARTIAL PANEL AVIONICS, bool) or not</MacroValue>
+            </Macro>
+
+        <Macro id="g" Name="g">
+              <MacroValue>C:fs9gps</MacroValue>
+        </Macro>
+                <Element>
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Image Name="g1000_mfd_leftside_background.bmp">
+            </Image>
+        </Element>
+        <Element id="Black background">
+                <Visibility>@PowerOn</Visibility>
+                <FloatPosition>153.000,35.000</FloatPosition>
+                <Rectangle id="Rectangle">
+                    <Width>800</Width>
+                    <Height>600</Height>
+                    <FillColor>Black</FillColor>
+                </Rectangle>
+        </Element> 
+        
+        
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Macro id="DataLabelFontHeight" Name="DataLabelFontHeight">
+            <MacroValue>17</MacroValue>
+        </Macro>
+        <Macro id="DataLabelHeight" Name="DataLabelHeight">
+            <MacroValue>19</MacroValue>
+        </Macro>
+        <Macro id="SmallLabelFontHeight" Name="SmallLabelFontHeight">
+            <MacroValue>15</MacroValue>
+        </Macro>
+        <Macro id="SmallLabelHeight" Name="SmallLabelHeight">
+            <MacroValue>17</MacroValue>
+        </Macro>
+        <Macro id="OilTemp caution boundaries">
+            <Macro id="OilTemp1Caution" Name="OilTemp1Caution">
+                <MacroValue>(A:ENG1 OIL TEMPERATURE, celsius) 24 &lt; </MacroValue>
+            </Macro>
+            <Macro id="OilTemp2Caution" Name="OilTemp2Caution">
+                <MacroValue>(A:ENG2 OIL TEMPERATURE, celsius) 24 &lt; </MacroValue>
+            </Macro>
+            <Macro id="OilTemp1Warning" Name="OilTemp1Warning">
+                <MacroValue>(A:ENG1 OIL TEMPERATURE, celsius) 105 &gt; </MacroValue>
+            </Macro>
+            <Macro id="OilTemp2Warning" Name="OilTemp2Warning">
+                <MacroValue>(A:ENG2 OIL TEMPERATURE, celsius) 105 &gt; </MacroValue>
+            </Macro>
+        </Macro>
+        <Macro id="OilPres caution boundaries">
+            <Macro id="OilPres1Caution" Name="OilPres1Caution">
+                <MacroValue>(A:ENG1 OIL PRESSURE, psi) 30 &lt; 
+(A:ENG1 OIL PRESSURE, psi) 10 &gt; and</MacroValue>
+            </Macro>
+            <Macro id="OilPres2Caution" Name="OilPres2Caution">
+                <MacroValue>(A:ENG2 OIL PRESSURE, psi) 30 &lt; 
+(A:ENG2 OIL PRESSURE, psi) 10 &gt; and</MacroValue>
+            </Macro>
+            <Macro id="OilPres1Warning" Name="OilPres1Warning">
+                <MacroValue>(A:ENG1 OIL PRESSURE, psi) 95 &gt; 
+(A:ENG1 OIL PRESSURE, psi) 10 &lt; or</MacroValue>
+            </Macro>
+            <Macro id="OilPres2Warning" Name="OilPres2Warning">
+                <MacroValue>(A:ENG2 OIL PRESSURE, psi) 95 &gt; 
+(A:ENG2 OIL PRESSURE, psi) 10 &lt; or</MacroValue>
+            </Macro>
+        </Macro>
+        <Macro id="CHT caution boundaries">
+            <Macro id="CHT1Warning" Name="CHT1Warning">
+                <MacroValue>(A:ENG1 CYLINDER HEAD TEMPERATURE, celsius) 230 &gt; </MacroValue>
+            </Macro>
+            <Macro id="CHT2Warning" Name="CHT2Warning">
+                <MacroValue>(A:ENG2 CYLINDER HEAD TEMPERATURE, celsius) 230 &gt; </MacroValue>
+            </Macro>
+        </Macro>
+        <Macro id="FFLOW caution boundaries">
+            <Macro id="FFlow1Warning" Name="FFlow1Warning">
+                <MacroValue>(A:ENG1 FUEL FLOW GPH, gallons per hour) 25 &gt; </MacroValue>
+            </Macro>
+            <Macro id="FFlow2Warning" Name="FFlow2Warning">
+                <MacroValue>(A:ENG2 FUEL FLOW GPH, gallons per hour) 25 &gt; </MacroValue>
+            </Macro>
+        </Macro>
+        <Macro id="FuelQty caution boundaries">
+            <Macro id="FuelQty1Caution" Name="FuelQty1Caution">
+                <MacroValue>(A:FUEL LEFT QUANTITY, gallons) 10 &lt;
+(A:FUEL LEFT QUANTITY, gallons) 0.5 &gt; and</MacroValue>
+            </Macro>
+            <Macro id="FuelQty2Caution" Name="FuelQty2Caution">
+                <MacroValue>(A:FUEL RIGHT QUANTITY, gallons) 10 &lt;
+(A:FUEL RIGHT QUANTITY, gallons) 0.5 &gt; and</MacroValue>
+            </Macro>
+            <Macro id="FuelQty1Warning" Name="FuelQty1Warning">
+                <MacroValue>(A:FUEL LEFT QUANTITY, gallons) 0.5 &lt;
+</MacroValue>
+            </Macro>
+            <Macro id="FuelQty2Warning" Name="FuelQty2Warning">
+                <MacroValue>(A:FUEL RIGHT QUANTITY, gallons) 0.5 &lt;</MacroValue>
+            </Macro>
+        </Macro>
+        <Macro id="Alt Load caution boundaries">
+            <Macro id="AltLoad1Caution" Name="AltLoad1Caution">
+                <MacroValue>(A:ELECTRICAL GENALT BUS AMPS:1, amps) 23 &gt; </MacroValue>
+            </Macro>
+            <Macro id="AltLoad2Caution" Name="AltLoad2Caution">
+                <MacroValue>(A:ELECTRICAL GENALT BUS AMPS:2, amps) 23 &gt; </MacroValue>
+            </Macro>
+        </Macro>
+        <Element id="Engine Data">
+            <Visibility>@PowerOn</Visibility>
+            <FloatPosition>141.000,80.000</FloatPosition>
+            <Element id="Manifold Pressure">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Element id="MAN (Static Text)">
+                    <FloatPosition>61.000,20.000</FloatPosition>
+                    <GaugeText id="GaugeText">
+                        <Axis>40.000,0.000</Axis>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>MAN</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Size>80,13</Size>
+                        <HeightScript>@DataLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Left Side">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Element id="Arc">
+                        <FloatPosition>7.000,-3.000</FloatPosition>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>150</StartAngle>
+                                <EndAngle>130</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Green">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                                <StartAngle>210</StartAngle>
+                                <EndAngle>150</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>230</StartAngle>
+                                <EndAngle>210</EndAngle>
+                            </Arc>
+                        </Element>
+                    </Element>
+                    <Element id="Tick Marks">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Element id="10">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>130 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="15">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>150 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="20">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>170 180 / pi *</Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="25">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>190 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="30">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>210 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="35">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>230 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                    </Element>
+                    <Element id="Max Label (35)">
+                        <FloatPosition>40.000,0.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>35</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Min Label (10)">
+                        <FloatPosition>36.000,76.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>10</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Pointer">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Polygon id="Polygon">
+                            <Bright>True</Bright>
+                            <FillColor>White</FillColor>
+                            <LineColor>White</LineColor>
+                            <Point id="0,1">
+                                <FloatPosition>0.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="40,1">
+                                <FloatPosition>40.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="43, 4">
+                                <FloatPosition>43.000,4.000</FloatPosition>
+                            </Point>
+                            <Point id="50, 0">
+                                <FloatPosition>50.000,0.000</FloatPosition>
+                            </Point>
+                            <Point id="43,-4">
+                                <FloatPosition>43.000,-4.000</FloatPosition>
+                            </Point>
+                            <Point id="40,-1">
+                                <FloatPosition>40.000,-1.000</FloatPosition>
+                            </Point>
+                            <Point id="0,-1">
+                                <FloatPosition>0.000,-1.000</FloatPosition>
+                            </Point>
+                        </Polygon>
+                        <Rotation id="Rotation">
+                            <Expression id="Expression">
+                                <Minimum>10.000</Minimum>
+                                <Maximum>35.000</Maximum>
+                                <Script>(A:ENG MANIFOLD PRESSURE:1, inHg)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>10.000</ExpressionResult>
+                                    <Degrees>130.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>35.000</ExpressionResult>
+                                    <Degrees>230.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Rotation>
+                    </Element>
+                    <Element id="Text Data">
+                        <FloatPosition>0.000,88.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>%((A:ENG MANIFOLD PRESSURE:1, inHg))%!0.1f!</GaugeString>
+                            <HorizontalAlign>RIGHT</HorizontalAlign>
+                            <Size>52,20</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                </Element>
+                <Element id="IN HG (Static Text)">
+                    <FloatPosition>61.000,55.000</FloatPosition>
+                    <GaugeText id="GaugeText">
+                        <Axis>40.000,0.000</Axis>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>IN HG</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Size>80,13</Size>
+                        <HeightScript>@DataLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Right Side">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Element id="Arc">
+                        <FloatPosition>10.000,-3.000</FloatPosition>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>4</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>50</StartAngle>
+                                <EndAngle>30</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Green">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>4</LineWidth>
+                                <LineColor>Green</LineColor>
+                                <StartAngle>30</StartAngle>
+                                <EndAngle>-30</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>4</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>330</StartAngle>
+                                <EndAngle>310</EndAngle>
+                            </Arc>
+                        </Element>
+                    </Element>
+                    <Element id="Tick Marks">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Element id="10">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>50 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="15">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>30 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="20">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>10 180 / pi *</Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="25">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-10 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="30">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-30 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="35">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-50 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                    </Element>
+                    <Element id="Max Label (35)">
+                        <FloatPosition>80.000,0.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>35</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Min Label (10)">
+                        <FloatPosition>84.000,76.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>10</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Pointer">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Polygon id="Polygon">
+                            <Bright>True</Bright>
+                            <FillColor>White</FillColor>
+                            <LineColor>White</LineColor>
+                            <Point id="0,1">
+                                <FloatPosition>0.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="40,1">
+                                <FloatPosition>40.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="43, 4">
+                                <FloatPosition>43.000,4.000</FloatPosition>
+                            </Point>
+                            <Point id="50, 0">
+                                <FloatPosition>50.000,0.000</FloatPosition>
+                            </Point>
+                            <Point id="43,-4">
+                                <FloatPosition>43.000,-4.000</FloatPosition>
+                            </Point>
+                            <Point id="40,-1">
+                                <FloatPosition>40.000,-1.000</FloatPosition>
+                            </Point>
+                            <Point id="0,-1">
+                                <FloatPosition>0.000,-1.000</FloatPosition>
+                            </Point>
+                        </Polygon>
+                        <Rotation id="Rotation">
+                            <Expression id="Expression">
+                                <Minimum>10.000</Minimum>
+                                <Maximum>35.000</Maximum>
+                                <Script>(A:ENG MANIFOLD PRESSURE:2, inHg)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="35">
+                                    <ExpressionResult>35.000</ExpressionResult>
+                                    <Degrees>-50.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="22.5">
+                                    <ExpressionResult>22.500</ExpressionResult>
+                                    <Degrees>0.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="10">
+                                    <ExpressionResult>10.000</ExpressionResult>
+                                    <Degrees>50.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Rotation>
+                    </Element>
+                    <Element id="Text Data">
+                        <FloatPosition>68.000,88.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>%((A:ENG MANIFOLD PRESSURE:2, inHg))%!0.1f!</GaugeString>
+                            <Size>55,20</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                </Element>
+                <Element id="Center circle">
+                    <FloatPosition>60.000,50.000</FloatPosition>
+                    <Circle id="Circle">
+                        <Axis>5.000,5.000</Axis>
+                        <Bright>True</Bright>
+                        <Radius>5</Radius>
+                        <FillColor>Black</FillColor>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Gray</LineColor>
+                    </Circle>
+                </Element>
+            </Element>
+            <Element id="RPM">
+                <FloatPosition>0.000,112.000</FloatPosition>
+                <Element id="3000">
+                    <FloatPosition>61.000,0.000</FloatPosition>
+                    <GaugeText id="GaugeText">
+                        <Axis>40.000,0.000</Axis>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                        <GaugeString>3000</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Size>80,13</Size>
+                        <HeightScript>@DataLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="RPM (Static Text)">
+                    <FloatPosition>61.000,20.000</FloatPosition>
+                    <GaugeText id="GaugeText">
+                        <Axis>40.000,0.000</Axis>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>RPM</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Size>80,13</Size>
+                        <HeightScript>@DataLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Left Side">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Element id="Arc">
+                        <FloatPosition>7.000,-3.000</FloatPosition>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>230</StartAngle>
+                                <EndAngle>130</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Green">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                                <StartAngle>230</StartAngle>
+                                <EndAngle>180</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Red">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                                <StartAngle>230</StartAngle>
+                                <EndAngle>220</EndAngle>
+                            </Arc>
+                        </Element>
+                    </Element>
+                    <Element id="Tick Marks">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Element id="0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>130 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="1">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>150 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="2">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>165 180 / pi *</Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="3">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>180 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="4">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>192.5 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="5">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>205 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="6">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>217.5 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="7">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>230 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                    </Element>
+                    <Element id="Min Label (0)">
+                        <FloatPosition>36.000,76.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>0</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Pointer">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Polygon id="Polygon">
+                            <Bright>True</Bright>
+                            <FillColor>White</FillColor>
+                            <LineColor>White</LineColor>
+                            <Point id="0,1">
+                                <FloatPosition>0.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="40,1">
+                                <FloatPosition>40.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="43, 4">
+                                <FloatPosition>43.000,4.000</FloatPosition>
+                            </Point>
+                            <Point id="50, 0">
+                                <FloatPosition>50.000,0.000</FloatPosition>
+                            </Point>
+                            <Point id="43,-4">
+                                <FloatPosition>43.000,-4.000</FloatPosition>
+                            </Point>
+                            <Point id="40,-1">
+                                <FloatPosition>40.000,-1.000</FloatPosition>
+                            </Point>
+                            <Point id="0,-1">
+                                <FloatPosition>0.000,-1.000</FloatPosition>
+                            </Point>
+                        </Polygon>
+                        <Rotation id="Rotation">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>3000.000</Maximum>
+                                <Script>(A:PROP1 RPM, rpm)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <Degrees>130.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="1000">
+                                    <ExpressionResult>1000.000</ExpressionResult>
+                                    <Degrees>150.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="2000">
+                                    <ExpressionResult>2000.000</ExpressionResult>
+                                    <Degrees>180.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="3000">
+                                    <ExpressionResult>3000.000</ExpressionResult>
+                                    <Degrees>230.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Rotation>
+                    </Element>
+                    <Element id="Text Data">
+                        <FloatPosition>0.000,88.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>%((A:PROP1 RPM, rpm))%!d!</GaugeString>
+                            <HorizontalAlign>RIGHT</HorizontalAlign>
+                            <Size>52,20</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                </Element>
+                <Element id="Right Side">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Element id="Arc">
+                        <FloatPosition>10.000,-3.000</FloatPosition>
+                        <Element id="White">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>White</LineColor>
+                                <StartAngle>50</StartAngle>
+                                <EndAngle>-50</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Green">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                                <EndAngle>-50</EndAngle>
+                            </Arc>
+                        </Element>
+                        <Element id="Red">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Arc id="Arc">
+                                <Bright>True</Bright>
+                                <Radius>50</Radius>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                                <StartAngle>-40</StartAngle>
+                                <EndAngle>-50</EndAngle>
+                            </Arc>
+                        </Element>
+                    </Element>
+                    <Element id="Tick Marks">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Element id="0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>50 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="1">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>30 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="2">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>15 180 / pi *</Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="3">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>0 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="4">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-12.5 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="5">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-25 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="6">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-37.5 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                        <Element id="7">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <PolyLine id="PolyLine">
+                                <Bright>True</Bright>
+                                <LineColor>White</LineColor>
+                                <Point id="40, 0">
+                                    <FloatPosition>40.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="50, 0">
+                                    <FloatPosition>50.000,0.000</FloatPosition>
+                                </Point>
+                            </PolyLine>
+                            <Rotation id="Rotation">
+                                <Expression id="Expression">
+                                    <Script>-50 180 / pi * </Script>
+                                </Expression>
+                            </Rotation>
+                        </Element>
+                    </Element>
+                    <Element id="Min Label (0)">
+                        <FloatPosition>84.000,76.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Axis>40.000,0.000</Axis>
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                            <GaugeString>0</GaugeString>
+                            <HorizontalAlign>CENTER</HorizontalAlign>
+                            <Size>80,13</Size>
+                            <HeightScript>@DataLabelHeight</HeightScript>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="Pointer">
+                        <FloatPosition>60.000,50.000</FloatPosition>
+                        <Polygon id="Polygon">
+                            <Bright>True</Bright>
+                            <FillColor>White</FillColor>
+                            <LineColor>White</LineColor>
+                            <Point id="0,1">
+                                <FloatPosition>0.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="40,1">
+                                <FloatPosition>40.000,1.000</FloatPosition>
+                            </Point>
+                            <Point id="43, 4">
+                                <FloatPosition>43.000,4.000</FloatPosition>
+                            </Point>
+                            <Point id="50, 0">
+                                <FloatPosition>50.000,0.000</FloatPosition>
+                            </Point>
+                            <Point id="43,-4">
+                                <FloatPosition>43.000,-4.000</FloatPosition>
+                            </Point>
+                            <Point id="40,-1">
+                                <FloatPosition>40.000,-1.000</FloatPosition>
+                            </Point>
+                            <Point id="0,-1">
+                                <FloatPosition>0.000,-1.000</FloatPosition>
+                            </Point>
+                        </Polygon>
+                        <Rotation id="Rotation">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>3000.000</Maximum>
+                                <Script>(A:PROP2 RPM, rpm)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="3000">
+                                    <ExpressionResult>3000.000</ExpressionResult>
+                                    <Degrees>-50.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="2000">
+                                    <ExpressionResult>2000.000</ExpressionResult>
+                                    <Degrees>0.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="1000">
+                                    <ExpressionResult>1000.000</ExpressionResult>
+                                    <Degrees>30.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <Degrees>50.000</Degrees>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Rotation>
+                    </Element>
+                    <Element id="Text Data">
+                        <FloatPosition>68.000,88.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>%((A:PROP2 RPM, rpm))%!d!</GaugeString>
+                            <Size>55,20</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                </Element>
+                <Element id="Center circle">
+                    <FloatPosition>60.000,50.000</FloatPosition>
+                    <Circle id="Circle">
+                        <Axis>5.000,5.000</Axis>
+                        <Bright>True</Bright>
+                        <Radius>5</Radius>
+                        <FillColor>Black</FillColor>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Gray</LineColor>
+                    </Circle>
+                </Element>
+            </Element>
+            <Element id="FFLOW GPH">
+                <FloatPosition>0.000,227.000</FloatPosition>
+                <Element id="Fuel Flow Label">
+                    <FloatPosition>33.000,0.000</FloatPosition>
+                    <GaugeText id="FUEL FLOW GPH">
+                        <BackgroundColorScript>@FFlow1Warning @FFlow2Warning or  
+if{ 'Red' } 
+els{ 'Black' }
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>%( @FFlow1Warning @FFlow2Warning or)%{if}\{blnk}%{end} FFLOW \n GPH \{nr}</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>20</Length>
+                        <LineSpacing>15.000</LineSpacing>
+                        <Size>50,29</Size>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,40.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>13.000,0.000</FloatPosition>
+                        <Element id="Green box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>90</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Red box">
+                            <FloatPosition>87.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>10</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 1">
+                            <FloatPosition>11.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 2">
+                            <FloatPosition>22.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 3">
+                            <FloatPosition>33.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 4">
+                            <FloatPosition>44.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 5">
+                            <FloatPosition>55.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 6">
+                            <FloatPosition>66.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 7">
+                            <FloatPosition>77.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 8">
+                            <FloatPosition>88.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 9">
+                            <FloatPosition>99.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 10">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>30.000</Maximum>
+                                <Script>(A:ENG1 FUEL FLOW GPH, gallons per hour)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="30">
+                                    <ExpressionResult>30.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@FFlow1Warning 
+if{ 'Red' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@FFlow1Warning if{ 'Red' }	
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@FFlow1Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Scale>1.000,0.000</Scale>
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>30.000</Maximum>
+                                <Script>(A:ENG2 FUEL FLOW GPH, gph)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="30">
+                                    <ExpressionResult>30.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@FFlow2Warning 
+if{ 'Red' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@FFlow2Warning 
+if{ 'Red' }
+els{ 'White' }
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@FFlow2Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                </Element>
+                <Element id="Min Label">
+                    <FloatPosition>3.000,48.000</FloatPosition>
+                    <GaugeText id="0">
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeight>13</FontHeight>
+                        <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                        <GaugeString>0</GaugeString>
+                        <Length>1</Length>
+                        <Size>80,15</Size>
+                        <HeightScript>@SmallLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Max Label">
+                    <FloatPosition>105.000,48.000</FloatPosition>
+                    <GaugeText id="30">
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeight>13</FontHeight>
+                        <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                        <GaugeString>30</GaugeString>
+                        <Length>2</Length>
+                        <Size>80,15</Size>
+                        <HeightScript>@SmallLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+            </Element>
+            <Element id="CHT">
+                <FloatPosition>0.000,289.000</FloatPosition>
+                <Element id="CHT Label">
+                    <FloatPosition>61.000,0.000</FloatPosition>
+                    <GaugeText id="CHT">
+                        <Axis>20.000,0.000</Axis>
+                        <BackgroundColorScript>@CHT1Warning @CHT2Warning or  
+if{ 'Red' } 
+els{ 'Black' }
+
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeight>15</FontHeight>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>%( @CHT1Warning @CHT2Warning or)%{if}\{blnk}%{end} CHT \{nr}</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>8</Length>
+                        <LineSpacing>18.000</LineSpacing>
+                        <Size>40,10</Size>
+                        <HeightScript>15</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,33.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>40.000,0.000</FloatPosition>
+                        <Element id="Green box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>60</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Red box">
+                            <FloatPosition>60.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>10</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 10">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@CHT1Warning 
+if{ 'Red' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@CHT1Warning if{ 'Red' }	
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@CHT1Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>250.000</Maximum>
+                                <Script>(A:ENG1 CYLINDER HEAD TEMPERATURE, celsius)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>1.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="250">
+                                    <ExpressionResult>250.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>250.000</Maximum>
+                                <Script>(A:ENG2 CYLINDER HEAD TEMPERATURE, celsius)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>1.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="250">
+                                    <ExpressionResult>250.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@CHT2Warning 
+if{ 'Red' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@CHT2Warning 
+if{ 'Red' }
+els{ 'White' }
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@CHT2Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+            <Element id="OIL TEMP">
+                <FloatPosition>0.000,340.000</FloatPosition>
+                <Element id="OIL TEMP  Label">
+                    <FloatPosition>25.000,0.000</FloatPosition>
+                    <GaugeText id="OIL PRES">
+                        <BackgroundColorScript>@OilTemp1Warning @OilTemp2Warning or  
+if{ 'Red' } 
+els{ 
+	@OilTemp1Caution @OilTemp2Caution or 
+	if{ 'Yellow' }
+	els{ 'Black' }
+}
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontColorScript>@OilTemp1Warning @OilTemp2Warning or 
+if{ 'White' }
+els{ @OilTemp1Caution @OilTemp2Caution or 
+	if{ 'Black' } 
+	els{ 'White' }
+}
+
+</FontColorScript>
+                        <FontHeight>15</FontHeight>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>%( @OilTemp1Warning @OilTemp2Warning or)%{if}\{blnk}%{end} OIL TEMP \{nr}</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>8</Length>
+                        <LineSpacing>18.000</LineSpacing>
+                        <Size>70,10</Size>
+                        <HeightScript>15</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,30.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Yellow box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>22</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Yellow</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Green box">
+                            <FloatPosition>22.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>87</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Red box">
+                            <FloatPosition>100.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>10</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 10">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@OilTemp1Caution if{ 'Yellow' }
+els{ 
+	@OilTemp1Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@OilTemp1Caution if{ 'Yellow' }
+els{ 
+	@OilTemp1Warning if{ 'Red' }
+	
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@OilTemp1Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>120.000</Maximum>
+                                <Script>(A:ENG1 OIL TEMPERATURE, celsius)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>1.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="120">
+                                    <ExpressionResult>120.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@OilTemp2Caution if{ 'Yellow' }
+els{
+	@OilTemp2Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@OilTemp2Caution if{ 'Yellow' }
+els{
+	@OilTemp2Warning if{ 'Red' }
+	els{ 'White' }
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@OilTemp2Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>120.000</Maximum>
+                                <Script>(A:ENG2 OIL TEMPERATURE, celsius)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>1.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="120">
+                                    <ExpressionResult>120.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                    </Element>
+                </Element>
+            </Element>
+            <Element id="OIL PRES">
+                <FloatPosition>0.000,384.000</FloatPosition>
+                <Element id="OIL PRES  Label">
+                    <FloatPosition>25.000,0.000</FloatPosition>
+                    <GaugeText id="OIL PRES">
+                        <BackgroundColorScript>@OilPres1Warning @OilPres2Warning or  
+if{ 'Red' } 
+els{ 
+	@OilPres1Caution @OilPres2Caution or 
+	if{ 'Yellow' }
+	els{ 'Black' }
+}
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontColorScript>@OilPres1Warning @OilPres2Warning or 
+if{ 'White' }
+els{ @OilPres1Caution @OilPres2Caution or 
+	if{ 'Black' } 
+	els{ 'White' }
+}
+
+</FontColorScript>
+                        <FontHeight>15</FontHeight>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>%( @OilPres1Warning @OilPres2Warning or)%{if}\{blnk}%{end} OIL PRES \{nr}</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>8</Length>
+                        <LineSpacing>18.000</LineSpacing>
+                        <Size>70,15</Size>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,33.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Red box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>10</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Yellow box">
+                            <FloatPosition>10.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>22</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Yellow</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Green box">
+                            <FloatPosition>32.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>30</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Red box">
+                            <FloatPosition>104.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>6</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Red</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 10">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>100.000</Maximum>
+                                <Script>(A:ENG1 OIL PRESSURE, psi)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="100">
+                                    <ExpressionResult>100.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@OilPres1Caution if{ 'Yellow' }
+els{ 
+	@OilPres1Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@OilPres1Caution if{ 'Yellow' }
+els{ 
+	@OilPres1Warning if{ 'Red' }
+	
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@OilPres1Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>100.000</Maximum>
+                                <Script>(A:ENG2 OIL PRESSURE, psi)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="100">
+                                    <ExpressionResult>100.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@OilPres2Caution if{ 'Yellow' }
+els{
+	@OilPres2Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@OilPres2Caution if{ 'Yellow' }
+els{
+	@OilPres2Warning if{ 'Red' }
+	els{ 'White' }
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@OilPres2Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+            <Element id="ALT LOAD">
+                <FloatPosition>0.000,433.000</FloatPosition>
+                <Element id="ALT LOAD  Label">
+                    <FloatPosition>25.000,0.000</FloatPosition>
+                    <GaugeText id="ALT LOAD">
+                        <BackgroundColorScript>@AltLoad1Caution @AltLoad2Caution or 
+	if{ 'Yellow' }
+	els{ 'Black' }
+
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontColorScript>@AltLoad1Caution @AltLoad2Caution or 
+	if{ 'Black' } 
+	els{ 'White' }
+
+
+</FontColorScript>
+                        <FontHeight>15</FontHeight>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>ALT LOAD</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>8</Length>
+                        <LineSpacing>18.000</LineSpacing>
+                        <Size>70,15</Size>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,30.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Green box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>100</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Yellow box">
+                            <FloatPosition>100.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>10</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Yellow</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 10">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>25.000</Maximum>
+                                <Script>(A:ELECTRICAL GENALT BUS AMPS:1, amps)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>25.000</ExpressionResult>
+                                    <FloatPosition>109.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@AltLoad1Caution 
+if{ 'Yellow' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@AltLoad1Caution if{ 'Yellow' }
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Minimum>0.000</Minimum>
+                                <Maximum>25.000</Maximum>
+                                <Script>(A:ELECTRICAL GENALT BUS AMPS:2, amps)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="NonlinearityEntry">
+                                    <ExpressionResult>25.000</ExpressionResult>
+                                    <FloatPosition>109.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@AltLoad2Caution 
+if{ 'Yellow' }
+els{ 'White' }
+</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@AltLoad2Caution 
+if{ 'Yellow' }
+els{ 'White' }
+</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+            <Element id="FUEL QTY GAL">
+                <FloatPosition>0.000,479.000</FloatPosition>
+                <Element id="FUEL QTY GAL Label">
+                    <FloatPosition>6.000,0.000</FloatPosition>
+                    <GaugeText id="FUEL QTY GAL">
+                        <BackgroundColorScript>@FuelQty1Warning @FuelQty2Warning or  
+if{ 'Red' } 
+els{ 
+	@FuelQty1Caution @FuelQty2Caution or 
+	if{ 'Yellow' }
+	els{ 'Black' }
+}
+</BackgroundColorScript>
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontColorScript>@FuelQty1Warning @FuelQty2Warning or 
+if{ 'White' }
+els{ @FuelQty1Caution @FuelQty2Caution or 
+	if{ 'Black' } 
+	els{ 'White' }
+}
+
+</FontColorScript>
+                        <FontHeight>15</FontHeight>
+                        <FontHeightScript>@DataLabelFontHeight</FontHeightScript>
+                        <GaugeString>%( @FuelQty1Warning @FuelQty2Warning or)%{if}\{blnk}%{end} FUEL QTY GAL \{nr}</GaugeString>
+                        <HorizontalAlign>CENTER</HorizontalAlign>
+                        <Length>8</Length>
+                        <LineSpacing>18.000</LineSpacing>
+                        <Size>110,15</Size>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Indicator">
+                    <FloatPosition>6.000,33.000</FloatPosition>
+                    <Element id="White line">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <HorizontalLine id="HorizontalLine">
+                            <Bright>True</Bright>
+                            <Width>110</Width>
+                            <LineColor>White</LineColor>
+                        </HorizontalLine>
+                    </Element>
+                    <Element id="Green and Red Boxes">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Element id="Yellow box">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>22</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Yellow</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                        <Element id="Green box">
+                            <FloatPosition>19.000,0.000</FloatPosition>
+                            <HorizontalLine id="HorizontalLine">
+                                <Bright>True</Bright>
+                                <Width>92</Width>
+                                <LineWidth>5</LineWidth>
+                                <LineColor>Green</LineColor>
+                            </HorizontalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Tick marks">
+                        <FloatPosition>0.000,-8.000</FloatPosition>
+                        <Element id="Tick mark 0">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>Red</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 1">
+                            <FloatPosition>13.750,2.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>12</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 2">
+                            <FloatPosition>27.500,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 3">
+                            <FloatPosition>41.250,2.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>12</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 4">
+                            <FloatPosition>55.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 5">
+                            <FloatPosition>68.750,2.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>12</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 6">
+                            <FloatPosition>82.500,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 7">
+                            <FloatPosition>96.250,2.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>12</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                        <Element id="Tick mark 8">
+                            <FloatPosition>110.000,0.000</FloatPosition>
+                            <VerticalLine id="VerticalLine">
+                                <Bright>True</Bright>
+                                <Height>16</Height>
+                                <LineColor>White</LineColor>
+                            </VerticalLine>
+                        </Element>
+                    </Element>
+                    <Element id="Left indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Script>(A:FUEL LEFT QUANTITY, gallons)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="75">
+                                    <ExpressionResult>75.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@FuelQty1Caution if{ 'Yellow' }
+els{ 
+	@FuelQty1Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -3">
+                                    <FloatPosition>5.000,-3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, -13">
+                                    <FloatPosition>5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -13">
+                                    <FloatPosition>-5.000,-13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, -3">
+                                    <FloatPosition>-5.000,-3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,13.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@FuelQty1Caution if{ 'Yellow' }
+els{ 
+	@FuelQty1Warning if{ 'Red' }
+	
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@FuelQty1Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>L</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,9</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                    <Element id="Right Indicator">
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                        <Shift id="Shift">
+                            <Expression id="Expression">
+                                <Script>(A:FUEL RIGHT QUANTITY, gallons)</Script>
+                            </Expression>
+                            <NonlinearityTable id="NonlinearityTable">
+                                <NonlinearityEntry id="0">
+                                    <ExpressionResult>0.000</ExpressionResult>
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                                <NonlinearityEntry id="75">
+                                    <ExpressionResult>75.000</ExpressionResult>
+                                    <FloatPosition>110.000,0.000</FloatPosition>
+                                </NonlinearityEntry>
+                            </NonlinearityTable>
+                        </Shift>
+                        <Element id="Polygon">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                            <Polygon id="Polygon">
+                                <Bright>True</Bright>
+                                <FillColor>White</FillColor>
+                                <FillColorScript>@FuelQty2Caution if{ 'Yellow' }
+els{
+	@FuelQty2Warning if{ 'Red' }
+	els{ 'White' }
+}</FillColorScript>
+                                <LineWidth>1</LineWidth>
+                                <LineColor>Black</LineColor>
+                                <Point id="0, 0">
+                                    <FloatPosition>0.000,0.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 3">
+                                    <FloatPosition>5.000,3.000</FloatPosition>
+                                </Point>
+                                <Point id="5, 13">
+                                    <FloatPosition>5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 13">
+                                    <FloatPosition>-5.000,13.000</FloatPosition>
+                                </Point>
+                                <Point id="-5, 3">
+                                    <FloatPosition>-5.000,3.000</FloatPosition>
+                                </Point>
+                            </Polygon>
+                        </Element>
+                        <Element id="Text">
+                            <FloatPosition>0.000,3.000</FloatPosition>
+                            <GaugeText id="GaugeText">
+                                <Axis>3.000,0.000</Axis>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BackgroundColorScript>@FuelQty2Caution if{ 'Yellow' }
+els{
+	@FuelQty2Warning if{ 'Red' }
+	els{ 'White' }
+}</BackgroundColorScript>
+                                <Bright>True</Bright>
+                                <FontFace>Glass Gauge</FontFace>
+                                <FontColor>0x090909</FontColor>
+                                <FontColorScript>@FuelQty2Warning
+if{ 'White' }
+els{ '0x090909' }</FontColorScript>
+                                <FontHeight>10</FontHeight>
+                                <GaugeString>R</GaugeString>
+                                <HorizontalAlign>CENTER</HorizontalAlign>
+                                <LineSpacing>12.000</LineSpacing>
+                                <Size>6,10</Size>
+                                <Transparent>True</Transparent>
+                            </GaugeText>
+                        </Element>
+                    </Element>
+                </Element>
+                <Element id="Min Label">
+                    <FloatPosition>2.000,46.000</FloatPosition>
+                    <GaugeText id="0">
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeight>12</FontHeight>
+                        <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                        <GaugeString>0</GaugeString>
+                        <Length>1</Length>
+                        <Size>80,15</Size>
+                        <HeightScript>@SmallLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+                <Element id="Max Label">
+                    <FloatPosition>95.000,46.000</FloatPosition>
+                    <GaugeText id="Text">
+                        <Bright>True</Bright>
+                        <FontFace>Glass Gauge</FontFace>
+                        <FontColor>White</FontColor>
+                        <FontHeight>12</FontHeight>
+                        <FontHeightScript>@SmallLabelFontHeight</FontHeightScript>
+                        <GaugeString>&gt;75</GaugeString>
+                        <HorizontalAlign>RIGHT</HorizontalAlign>
+                        <Length>2</Length>
+                        <Size>25,15</Size>
+                        <HeightScript>@SmallLabelHeight</HeightScript>
+                        <Transparent>True</Transparent>
+                    </GaugeText>
+                </Element>
+            </Element>
+            <Element id="Vertical Line">
+                <FloatPosition>122.000,0.000</FloatPosition>
+                <VerticalLine id="VerticalLine">
+                    <Bright>True</Bright>
+                    <Height>537</Height>
+                    <LineWidth>1</LineWidth>
+                </VerticalLine>
+            </Element>
+        </Element>
+    
+        <FloatPosition>0.000,0.000</FloatPosition>
+                <Update id="Unpress all buttons">
+            <Script>
+                    (@g:mfd NavButton pressed) 0 &gt; if{ (@g:mfd NavButton pressed) ++ s0 (&gt;@g:mfd NavButton pressed) l0 6 &gt; if{ 0 (&gt;@g:mfd NavButton pressed) } }
+            </Script>
+        </Update>
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>280,715</Size>
+	<Element id="Buttons">
+        <Element>
+            <FloatPosition>25.000,266.000</FloatPosition>
+            <Image Name="g1000_mfd_left_knob_hdg.bmp">
+            </Image>
+        </Element>
+        <Element>
+            <FloatPosition>60.000,77.000</FloatPosition>
+            <Select id="Select">
+                <Expression id="Expression">
+                     <Script>(@g:mfd NavButton pressed) 0 &gt;</Script>
+                </Expression>
+                    <Case id="Case">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Image id="g1000_main_button_nav_out.bmp" Name="g1000_main_button_nav_out.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                    <Case id="Case">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Image id="g1000_main_button_nav_in.bmp" Name="g1000_main_button_nav_in.bmp">
+                            <Transparent>True</Transparent>
+                        </Image>
+                    </Case>
+                </Select>
+        </Element>
+        <Element>
+            <FloatPosition>148.000,658.000</FloatPosition>
+            <Image Name="g1000_main_button_1_out.bmp">
+            </Image>
+        </Element>
+        <Element>
+            <FloatPosition>216.000,658.000</FloatPosition>
+            <Image Name="g1000_main_button_2_out.bmp">
+            </Image>
+        </Element>
+	</Element>
+        
+        <Element id="Top Bar">
+            <Visibility>@PowerOn</Visibility>
+            <FloatPosition>141.000,35.000</FloatPosition>
+            <Image id="g1000_pfd_top_bar.bmp" Name="g1000_pfd_top_bar.bmp">
+              <Bright>True</Bright>
+              <Transparent>True</Transparent>
+            </Image>
+		<Element>
+            
+        <FloatPosition>0.000,0.000</FloatPosition>
+<Element>
+<Visibility>@PowerOn</Visibility>
+        <Element id="NAV1">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Element id="NAV1 label">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <TopScript>@TopBarSmallLabelTop</TopScript>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>15</FontHeight>
+                    <FontHeightScript>@TopBarSmallFontHeight</FontHeightScript>
+                    <GaugeString>NAV1</GaugeString>
+                    <Length>4</Length>
+                    <Size>29,17</Size>
+                    <HeightScript>@TopBarSmallHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                </GaugeText>
+            </Element>
+            <Element id="NAV1 standby">
+                <FloatPosition>26.000,-5.000</FloatPosition>
+                <TopScript>@TopBarDataTop</TopScript>
+                <Visibility>(A:PARTIAL PANEL NAV:1, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeightScript>@TopBarLargeFont</FontHeightScript>
+                    <GaugeString>%((A:NAV1 STANDBY FREQUENCY, MHz))%!06.2f!</GaugeString>
+                    <HorizontalAlign>CENTER</HorizontalAlign>
+                    <Length>6</Length>
+                    <Size>75,27</Size>
+                    <HeightScript>@TopBarLargeFontHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                </GaugeText>
+            </Element>
+            <Element id="NAV1 active">
+                <FloatPosition>107.000,-5.000</FloatPosition>
+                <TopScript>@TopBarDataTop</TopScript>
+                <Visibility>(A:PARTIAL PANEL NAV:1, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>25</FontHeight>
+                    <FontHeightScript>@TopBarLargeFont</FontHeightScript>
+                    <GaugeString>%((L:CDI source selected, enum) 1 ==
+(A:PARTIAL PANEL NAV:1, bool) !
+and)%{if}\{clr2}%{end}%((A:NAV1 ACTIVE FREQUENCY, MHz))%!06.2f!\{clr}</GaugeString>
+                    <HorizontalAlign>CENTER</HorizontalAlign>
+                    <Length>6</Length>
+                    <Size>75,27</Size>
+                    <HeightScript>@TopBarLargeFontHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                    <AlternateColor id="Chartreuse">
+                        <FontColor>Chartreuse</FontColor>
+                    </AlternateColor>
+                </GaugeText>
+            </Element>
+            <Element id="Ident">
+                <FloatPosition>170.000,4.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:1, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>14</FontHeight>
+                    <FontHeightScript>@TopBarMediumFontHeight</FontHeightScript>
+                    <GaugeString>%((L:CDI source selected, enum) 1 ==
+(A:PARTIAL PANEL NAV:1, bool) !
+and)%{if}\{clr2}%{end}%((A:NAV1 IDENT, string))%!s!\{clr}</GaugeString>
+                    <HorizontalAlign>RIGHT</HorizontalAlign>
+                    <Length>4</Length>
+                    <Size>35,20</Size>
+                    <HeightScript>@TopBarMediumHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                    <AlternateColor id="Chartreuse">
+                        <FontColor>Chartreuse</FontColor>
+                    </AlternateColor>
+                </GaugeText>
+            </Element>
+            <Element id="NAV1 FAIL">
+                <FloatPosition>0.000,0.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:1, bool)</Visibility>
+                <Element id="Red X pt 1">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <PolyLine id="PolyLine">
+                        <Bright>True</Bright>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Red</LineColor>
+                        <Point id="Point">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                        </Point>
+                        <Point id="Point">
+                            <FloatPosition>204.000,20.000</FloatPosition>
+                        </Point>
+                    </PolyLine>
+                </Element>
+                <Element id="Red X pt 2">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <PolyLine id="PolyLine">
+                        <Bright>True</Bright>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Red</LineColor>
+                        <Point id="Point">
+                            <FloatPosition>204.000,0.000</FloatPosition>
+                        </Point>
+                        <Point id="Point">
+                            <FloatPosition>0.000,20.000</FloatPosition>
+                        </Point>
+                    </PolyLine>
+                </Element>
+            </Element>
+        </Element>
+        <Element id="NAV2">
+            <FloatPosition>0.000,4.000</FloatPosition>
+            <Element id="NAV2 label">
+                <FloatPosition>0.000,19.000</FloatPosition>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>15</FontHeight>
+                    <FontHeightScript>@TopBarSmallFontHeight</FontHeightScript>
+                    <GaugeString>NAV2</GaugeString>
+                    <Length>4</Length>
+                    <Size>50,17</Size>
+                    <HeightScript>@TopBarSmallHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                </GaugeText>
+            </Element>
+            <Element id="NAV2 standby">
+                <FloatPosition>26.000,16.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:2, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeightScript>@TopBarLargeFont</FontHeightScript>
+                    <GaugeString>%((A:NAV2 STANDBY FREQUENCY, MHz))%!06.2f!</GaugeString>
+                    <HorizontalAlign>CENTER</HorizontalAlign>
+                    <Length>6</Length>
+                    <Size>75,27</Size>
+                    <HeightScript>@TopBarLargeFontHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                </GaugeText>
+            </Element>
+            <Element id="NAV2 active">
+                <FloatPosition>107.000,16.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:2, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>25</FontHeight>
+                    <FontHeightScript>@TopBarLargeFont</FontHeightScript>
+                    <GaugeString>%((L:CDI source selected, enum) 2 ==
+(A:PARTIAL PANEL NAV:2, bool) !
+and)%{if}\{clr2}%{end}%((A:NAV2 ACTIVE FREQUENCY, MHz))%!06.2f!\{clr}</GaugeString>
+                    <HorizontalAlign>CENTER</HorizontalAlign>
+                    <Length>6</Length>
+                    <Size>75,27</Size>
+                    <HeightScript>@TopBarLargeFontHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                    <AlternateColor id="Chartreuse">
+                        <FontColor>Chartreuse</FontColor>
+                    </AlternateColor>
+                </GaugeText>
+            </Element>
+            <Element id="Ident">
+                <FloatPosition>170.000,22.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:2, bool) !</Visibility>
+                <GaugeText id="GaugeText">
+                    <Bright>True</Bright>
+                    <FontFace>Glass Gauge</FontFace>
+                    <FontColor>White</FontColor>
+                    <FontHeight>14</FontHeight>
+                    <FontHeightScript>@TopBarMediumFontHeight</FontHeightScript>
+                    <GaugeString>%((L:CDI source selected, enum) 2 ==
+(A:PARTIAL PANEL NAV:2, bool) !
+and)%{if}\{clr2}%{end}%((A:NAV2 IDENT, string))%!s!\{clr}</GaugeString>
+                    <HorizontalAlign>RIGHT</HorizontalAlign>
+                    <Length>4</Length>
+                    <Size>35,20</Size>
+                    <HeightScript>@TopBarMediumHeight</HeightScript>
+                    <Transparent>True</Transparent>
+                    <AlternateColor id="Chartreuse">
+                        <FontColor>Chartreuse</FontColor>
+                    </AlternateColor>
+                </GaugeText>
+            </Element>
+            <Element id="NAV2 FAIL">
+                <FloatPosition>0.000,22.000</FloatPosition>
+                <Visibility>(A:PARTIAL PANEL NAV:2, bool)</Visibility>
+                <Element id="Red X pt 1">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <PolyLine id="PolyLine">
+                        <Bright>True</Bright>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Red</LineColor>
+                        <Point id="Point">
+                            <FloatPosition>0.000,0.000</FloatPosition>
+                        </Point>
+                        <Point id="Point">
+                            <FloatPosition>204.000,19.000</FloatPosition>
+                        </Point>
+                    </PolyLine>
+                </Element>
+                <Element id="Red X pt 2">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <PolyLine id="PolyLine">
+                        <Bright>True</Bright>
+                        <LineWidth>2</LineWidth>
+                        <LineColor>Red</LineColor>
+                        <Point id="Point">
+                            <FloatPosition>204.000,0.000</FloatPosition>
+                        </Point>
+                        <Point id="Point">
+                            <FloatPosition>0.000,19.000</FloatPosition>
+                        </Point>
+                    </PolyLine>
+                </Element>
+            </Element>
+        </Element>
+        <Element id="Selected NAV indicator">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Visibility>
+(A:PARTIAL PANEL NAV:1, bool) ! 
+(A:PARTIAL PANEL NAV:2, bool) ! 
+or</Visibility>
+            <Element id="Arrow">
+                <FloatPosition>98.000,6.000</FloatPosition>
+                <PolyLine id="PolyLine">
+                    <Bright>True</Bright>
+                    <LineWidth>2</LineWidth>
+                    <LineColor>Cyan</LineColor>
+                    <Point id="Point">
+                        <FloatPosition>4.000,0.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>0.000,5.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>4.000,10.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>0.000,5.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>15.000,5.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>11.000,0.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>15.000,5.000</FloatPosition>
+                    </Point>
+                    <Point id="Point">
+                        <FloatPosition>11.000,10.000</FloatPosition>
+                    </Point>
+                </PolyLine>
+            </Element>
+            <Element id="Box">
+                <FloatPosition>34.000,-1.000</FloatPosition>
+                <Rectangle id="Rectangle">
+                    <Bright>True</Bright>
+                    <Width>61</Width>
+                    <Height>23</Height>
+                    <LineColor>Cyan</LineColor>
+                </Rectangle>
+            </Element>
+            <Shift id="Shift">
+                <Scale>0.000,1.000</Scale>
+                <Expression id="Expression">
+                    <Script>0 (L:SelectedNav2, number) 1 == 
+(A:PARTIAL PANEL NAV:1, bool) or 
+(A:PARTIAL PANEL NAV:2, bool) ! and 
+if{ 19 }</Script>
+                </Expression>
+            </Shift>
+        </Element>
+</Element>
+    
+        </Element>
+	</Element>
+        <Element id="Bottom Bar">
+                <Visibility>@PowerOn</Visibility>
+                <FloatPosition>141.000,618.000</FloatPosition>
+                <Image id="g1000_pfd_soft_button_bar.bmp" Name="g1000_pfd_soft_button_bar.bmp">
+                    <Transparent>True</Transparent>
+                    <Bright>True</Bright>
+                </Image>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>1102,704</Size>
+            <MouseArea id="NAV">
+                <FloatPosition>10.000,125.000</FloatPosition>
+                <Size>94,90</Size>
+                <MouseArea id="Large decrease">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>43,25</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(L:SelectedNav2, number) 0 == if{ (&gt;K:NAV1_RADIO_WHOLE_DEC) } els{ (&gt;K:NAV2_RADIO_WHOLE_DEC) }</Script>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Large increase">
+                    <FloatPosition>50.000,0.000</FloatPosition>
+                    <Size>44,25</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(L:SelectedNav2, number) 0 == if{ (&gt;K:NAV1_RADIO_WHOLE_INC) } els{ (&gt;K:NAV2_RADIO_WHOLE_INC) }</Script>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Small decrease">
+                    <FloatPosition>0.000,28.000</FloatPosition>
+                    <Size>43,25</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(L:SelectedNav2, number) 0 == if{ (&gt;K:NAV1_RADIO_FRACT_DEC) } els{ (&gt;K:NAV2_RADIO_FRACT_DEC) }</Script>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Small increase">
+                    <FloatPosition>50.000,28.000</FloatPosition>
+                    <Size>43,25</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(L:SelectedNav2, number) 0 == if{ (&gt;K:NAV1_RADIO_FRACT_INC) } els{ (&gt;K:NAV2_RADIO_FRACT_INC) }</Script>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Push">
+                    <FloatPosition>20.000,58.000</FloatPosition>
+                    <Size>43,25</Size>
+                    <CursorType>Hand</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(L:SelectedNav2, number) 1 == if{ 0 } els{ 1 }  (&gt;L:SelectedNav2, number) }</Script>
+                    </MouseClick>
+                </MouseArea>
+            </MouseArea>
+            <MouseArea id="NAV Active-Standby swap">
+                <FloatPosition>73.000,78.000</FloatPosition>
+                <Size>49,29</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+	1 (&gt;@g:mfd NavButton pressed, bool)
+	(L:SelectedNav2, number) 0 == if{ (&gt;K:NAV1_RADIO_SWAP) } els{ (&gt;K:NAV2_RADIO_SWAP) }
+</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="COM Active-Standby swap">
+                <FloatPosition>980.000,78.000</FloatPosition>
+                <Size>49,29</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>(L:SelectedCom2, number) 0 == if{ (&gt;K:COM_STBY_RADIO_SWAP) } els{ (&gt;K:COM2_RADIO_SWAP) }</Script>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="Heading">
+                <FloatPosition>8.000,250.000</FloatPosition>
+                <Size>90,90</Size>
+                <MouseArea id="Heading bug decrease">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>40,60</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(P:Absolute time, seconds) (&gt;L:time hdg bug changed, seconds)
+(&gt;K:HEADING_BUG_DEC)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Heading bug increase">
+                    <FloatPosition>50.000,0.000</FloatPosition>
+                    <Size>40,60</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(P:Absolute time, seconds) (&gt;L:time hdg bug changed, seconds)
+(&gt;K:HEADING_BUG_INC)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Heading bug sync">
+                    <FloatPosition>0.000,60.000</FloatPosition>
+                    <Size>90,30</Size>
+                    <CursorType>Hand</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>
+	1 (&gt;@g:pfd HDGKnob pressed, bool)
+	(A:Plane heading degrees gyro, degrees) (&gt;K:HEADING_BUG_SET) (P:Absolute time, seconds) (&gt;L:time hdg bug changed, seconds)
+</Script>
+                        <ClickType>LeftSingle</ClickType>
+                    </MouseClick>
+                </MouseArea>
+                <Tooltip id="Tooltip">
+                    <DefaultId>HELPID_GAUGE_HEADING_BUG_ADJUST</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="Altitude bug">
+                <FloatPosition>13.000,614.000</FloatPosition>
+                <Size>90,63</Size>
+                <MouseArea id="Altitude bug decrease 1000">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>40,28</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1000 (&gt;K:AP_ALT_VAR_DEC)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Altitude bug increase 1000">
+                    <FloatPosition>53.000,1.000</FloatPosition>
+                    <Size>37,27</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1000 (&gt;K:AP_ALT_VAR_INC)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Altitude bug decrease 100">
+                    <FloatPosition>15.000,33.000</FloatPosition>
+                    <Size>27,27</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <KeyEvent>AP_ALT_VAR_DEC</KeyEvent>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Altitude bug increase 100">
+                    <FloatPosition>50.000,33.000</FloatPosition>
+                    <Size>31,26</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <KeyEvent>AP_ALT_VAR_INC</KeyEvent>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_ALTITUDE_BUG_ADJUST</DefaultId>
+                </Tooltip>
+            </MouseArea>
+            <MouseArea id="Softkeys">
+                <FloatPosition>160.000,659.000</FloatPosition>
+                <Size>790,35</Size>
+                <MouseArea id="Softkey 0">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>45,35</Size>
+                </MouseArea>
+                <MouseArea id="Softkey 1">
+                    <FloatPosition>65.000,0.000</FloatPosition>
+                    <Size>45,35</Size>
+                </MouseArea>
+                <MouseArea id="Softkey 2">
+                    <FloatPosition>132.000,0.000</FloatPosition>
+                    <Size>45,35</Size>
+                </MouseArea>
+                <MouseArea id="Softkey 3">
+                    <FloatPosition>202.000,0.000</FloatPosition>
+                    <Size>45,35</Size>
+                </MouseArea>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>
