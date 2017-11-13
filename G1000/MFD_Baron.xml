@@ -1,4 +1,4 @@
-<SimBase.Document Type="AceXML" version="1,0" id="MFD">
+﻿<SimBase.Document Type="AceXML" version="1,0" id="MFD">
     <Descr>AceXML Document</Descr>
     <Filename>Baron_C172.xml</Filename>
     <SimGauge.Gauge id="Gauge" ArtDirectory="W:\FS10CoreXT\private\fs\src\gauges\g1000\objh\i386">
@@ -2700,7 +2700,7 @@ l7 (&gt;@g:list3MaxElements)
                         <Value>(@g:map_ZoomFactor) 900.0 *</Value>
                     </CustomDrawParam>
                     <CustomDrawParam id="Heading" Name="Heading">
-                        <Value>(A:GPS GROUND TRUE TRACK, Radians)</Value>
+                        <Value>0</Value>
                     </CustomDrawParam>
                     <CustomDrawParam id="LayerTerrain" Name="LayerTerrain">
                         <Value>1</Value>
@@ -2798,10 +2798,16 @@ l7 (&gt;@g:list3MaxElements)
                 </CustomDraw>
                 <Element id="Airplane icon">
                     <FloatPosition>322.000,267.000</FloatPosition>
-                    <Image id="airplane_icon.bmp" Name="airplane_icon.bmp">
-                        <Transparent>True</Transparent>
-                        <Bright>True</Bright>
-                    </Image>
+                  <Image id="airplane_icon.bmp" Name="airplane_icon.bmp">
+                          <Transparent>True</Transparent>
+                         <Axis>15.000,10.000</Axis>
+                          <Bright>True</Bright>
+                      </Image>
+                     <Rotation id="Rotation">
+                         <Expression id="Expression">
+                             <Script>(A:Plane heading degrees gyro, radians)</Script>
+                         </Expression>
+                     </Rotation>
                 </Element>
                 <Element id="Directional arrow">
                     <FloatPosition>25.000,25.000</FloatPosition>
@@ -2812,7 +2818,7 @@ l7 (&gt;@g:list3MaxElements)
                     </Image>
                     <Rotation id="Rotation">
                         <Expression id="Expression">
-                            <Script>(A:GPS GROUND TRUE TRACK, Radians) /-/</Script>
+                            <Script>0 /-/</Script>
                         </Expression>
                     </Rotation>
                 </Element>
@@ -2893,7 +2899,7 @@ l7 (&gt;@g:list3MaxElements)
                             <FontFace>Glass Gauge</FontFace>
                             <FontColor>White</FontColor>
                             <FontHeight>15</FontHeight>
-                            <GaugeString>TRACK UP</GaugeString>
+                            <GaugeString>NORTH UP</GaugeString>
                             <HorizontalAlign>CENTER</HorizontalAlign>
                             <Length>5</Length>
                             <Size>90,23</Size>
@@ -2908,6 +2914,9 @@ l7 (&gt;@g:list3MaxElements)
                 <CustomDraw id="CustomDraw" Name="fs9gps:map">
                     <Size>460,537</Size>
                     <Bright>True</Bright>
+                    <CustomDrawParam id="TrackUp" Name="TrackUp">
+                        <Value>0"</Value>
+                    </CustomDrawParam>
                     <CustomDrawParam id="Latitude" Name="Latitude">
                         <Value>@SmallMapLat</Value>
                     </CustomDrawParam>

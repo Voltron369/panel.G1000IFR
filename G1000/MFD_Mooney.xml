@@ -2670,6 +2670,9 @@ l7 (&gt;@g:list3MaxElements)
                 <CustomDraw id="CustomDraw" Name="fs9gps:map">
                     <Size>676,537</Size>
                     <Bright>True</Bright>
+                    <CustomDrawParam id="TrackUp" Name="TrackUp">
+                        <Value>0"</Value>
+                    </CustomDrawParam>
                     <CustomDrawParam id="Latitude" Name="Latitude">
                         <Value>(A:GPS POSITION LAT, Radians)</Value>
                     </CustomDrawParam>
@@ -2701,7 +2704,7 @@ l7 (&gt;@g:list3MaxElements)
                         <Value>(@g:map_ZoomFactor) 900.0 *</Value>
                     </CustomDrawParam>
                     <CustomDrawParam id="Heading" Name="Heading">
-                        <Value>(A:GPS GROUND TRUE TRACK, Radians)</Value>
+                        <Value>0</Value>
                     </CustomDrawParam>
                     <CustomDrawParam id="LayerTerrain" Name="LayerTerrain">
                         <Value>1</Value>
@@ -2801,19 +2804,24 @@ l7 (&gt;@g:list3MaxElements)
                     <FloatPosition>322.000,267.000</FloatPosition>
                     <Image id="airplane_icon.bmp" Name="airplane_icon.bmp">
                         <Transparent>True</Transparent>
+                        <Axis>15.000,10.000</Axis>
                         <Bright>True</Bright>
-                    </Image>
+                      </Image>
+                    <Rotation id="Rotation">
+                        <Expression id="Expression">
+                            <Script>(A:Plane heading degrees gyro, radians)</Script>
+                        </Expression>
+                    </Rotation>
                 </Element>
                 <Element id="Directional arrow">
                     <FloatPosition>25.000,25.000</FloatPosition>
                     <Image id="Directional arrow.bmp" Name="Directional arrow.bmp">
                         <Transparent>True</Transparent>
-                        <Axis>17.000,22.000</Axis>
                         <Bright>True</Bright>
                     </Image>
                     <Rotation id="Rotation">
                         <Expression id="Expression">
-                            <Script>(A:GPS GROUND TRUE TRACK, Radians) /-/</Script>
+                            <Script>0 /-/</Script>
                         </Expression>
                     </Rotation>
                 </Element>
@@ -2894,7 +2902,7 @@ l7 (&gt;@g:list3MaxElements)
                             <FontFace>Glass Gauge</FontFace>
                             <FontColor>White</FontColor>
                             <FontHeight>15</FontHeight>
-                            <GaugeString>TRACK UP</GaugeString>
+                            <GaugeString>NORTH UP</GaugeString>
                             <HorizontalAlign>CENTER</HorizontalAlign>
                             <Length>5</Length>
                             <Size>90,23</Size>
