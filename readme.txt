@@ -4,6 +4,7 @@ FSX G1000 Panel
 This is a free garmin G1000 Panel that works with Microsoft Flight Simulator FSX
 
 Features
+* Shows NAV2 DME in the PFD
 * Current Track Indicator on the HSI (Magenta Diamond)
 * MFD map is North up
 * Virtual Cockpit mode works
