@@ -3948,7 +3948,7 @@ and</Visibility>
                     <FloatPosition>360.000,457.000</FloatPosition>
                     <Image id="g1000_pfd_hsi_wind.bmp" Name="g1000_pfd_hsi_wind.bmp">
                         <Transparent>True</Transparent>
-                        <Axis>127.000,135.000</Axis>
+                        <Axis>6.000,135.000</Axis>
                         <Bright>True</Bright>
                     </Image>
                     <Rotation id="Rotation">
