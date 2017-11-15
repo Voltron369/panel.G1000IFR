@@ -3870,6 +3870,66 @@ and</Visibility>
                         </GaugeText>
                     </Element>
                 </Element>
+                <Element id="DME window">
+                    <FloatPosition>198.000,458.000</FloatPosition>
+                    <Visibility>1</Visibility>
+                    <Image id="dme_box.bmp" Name="dme_box.bmp">
+                        <Transparent>True</Transparent>
+                        <Bright>True</Bright>
+                    </Image>
+                    <Element id="DME label">
+                        <FloatPosition>2.000,0.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontColor>White</FontColor>
+                            <FontHeight>15</FontHeight>
+                            <GaugeString>DME</GaugeString>
+                            <Length>3</Length>
+                            <Size>35,22</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="DME nav">
+                        <FloatPosition>2.000,14.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontColor>cyan</FontColor>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>NAV2</GaugeString>
+                            <Length>4</Length>
+                            <Size>36,22</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="DME freq">
+                        <FloatPosition>2.000,31.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontColor>cyan</FontColor>
+                            <FontHeight>20</FontHeight>
+                            <GaugeString>%((A:NAV2 ACTIVE FREQUENCY, Megahertz))%!6.2f!</GaugeString>
+                            <Length>6</Length>
+                            <Size>70,22</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                    <Element id="DME data">
+                        <FloatPosition>2.000,50.000</FloatPosition>
+                        <GaugeText id="GaugeText">
+                            <Bright>True</Bright>
+                            <FontFace>Glass Gauge</FontFace>
+                            <FontColor>white</FontColor>
+                            <FontHeight>15</FontHeight>
+                            <GaugeString>%((A:NAV2 DME, nmiles) s0)%(l0 0 &gt;=)%{if}%(l0 9999 min d 99.95 &lt;)%{if}%!4.1f!%{else}%!4d!%{end}%{else}--.-%{end} NM</GaugeString>
+                            <Length>7</Length>
+                            <Size>70,22</Size>
+                            <Transparent>True</Transparent>
+                        </GaugeText>
+                    </Element>
+                </Element>
                 <Element id="Rotating compass">
                     <FloatPosition>360.000,457.000</FloatPosition>
                     <Image id="g1000_pfd_hsi_compass_ring.bmp" Name="g1000_pfd_hsi_compass_ring.bmp">
